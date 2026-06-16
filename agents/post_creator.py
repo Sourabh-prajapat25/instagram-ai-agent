@@ -27,26 +27,18 @@ def create_post():
 
     try:
 
+        FONT_PATH = "assets/fonts/Montserrat-Bold.ttf"
+
         quote_font = ImageFont.truetype(
-            "arial.ttf",
-            95
+            FONT_PATH,
+            77
         )
 
-        cta_font = ImageFont.truetype(
-            "arial.ttf",
-            48
-        )
+    except Exception as e:
 
-        brand_font = ImageFont.truetype(
-            "arial.ttf",
-            42
-        )
-
-    except:
+        print("Font Error:", e)
 
         quote_font = ImageFont.load_default()
-        cta_font = ImageFont.load_default()
-        brand_font = ImageFont.load_default()
 
     wrapped = "\n".join(
         textwrap.wrap(
@@ -55,7 +47,6 @@ def create_post():
         )
     )
 
-    # Quote box size
     bbox = draw.multiline_textbbox(
         (0, 0),
         wrapped,
@@ -66,28 +57,17 @@ def create_post():
     text_width = bbox[2] - bbox[0]
     text_height = bbox[3] - bbox[1]
 
-    # Center quote
     x = (1080 - text_width) // 2
-    y = (1920 - text_height) // 2 - 250
+
+    y = (1920 - text_height) // 2 - 300
 
     draw.multiline_text(
         (x, y),
         wrapped,
-        fill="white",
+        fill="blue",
         font=quote_font,
         align="center",
         spacing=20
-    )
-
-    
-
-
-    # Username
-    draw.text(
-        (300, 1600),
-        "Follow @psychology_see",
-        fill="yellow",
-        font=brand_font
     )
 
     image = image.convert("RGB")
