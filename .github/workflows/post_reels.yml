@@ -2,7 +2,7 @@ name: Instagram Reel Bot
 
 on:
   schedule:
-    - cron: '30 2 * * *'   # 8:00 AM IST
+    - cron: '*/5 * * * *'
     - cron: '30 15 * * *'  # 9:00 PM IST
 
   workflow_dispatch:
