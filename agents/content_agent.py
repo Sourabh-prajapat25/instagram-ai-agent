@@ -17,7 +17,7 @@ model = genai.GenerativeModel(
 def generate_content():
 
     prompt = """
-Generate ONE viral psychology Instagram reel.
+Generate ONE viral Instagram riddle reel.
 
 Return ONLY valid JSON.
 
@@ -38,18 +38,47 @@ Return ONLY valid JSON.
 
 Requirements:
 
-- Fact must be psychology based
-- Fact must come under 9-10 words
-- Research backed
-- Relationship topics preferred
-- Man,boy or women,girls topics prefered
-- fact words language is simple easy to understand
-- Human behaviour topics preferred
-- Script 100-120 words
-- Caption engaging
-- Include CTA
-- Add 10 - 15 relevant hashtags at the end of caption 
-- 6 cinematic image prompts
+- fact field must contain the riddle text
+- Riddle must be short under (15 - 20 words)
+- Give Riddle that not has high vocabulary
+- Use emoji also in riddle at fact tab for good looking
+- you can Enter the sentence also for good looking it increace readbility 
+- Very easy English
+- Easy to understand
+- Funny, tricky or brain teaser style
+- Must encourage people to think
+- No answer in fact field
+- No emojis in fact field
+- Maximum 2 short lines
+- source field should contain:
+  "Generated Riddle"
+
+- script must be 80-120 words
+- Script should talk about the riddle and encourage viewers to think before checking comments
+- Do NOT reveal the answer in the script
+
+- Caption must be engaging
+- Ask users to comment their answer
+- Include CTA:
+  "Comment your answer below 👇"
+
+- Add 10-15 relevant riddle hashtags at the end of caption
+
+
+Examples of good riddles:
+
+What has many keys
+but can't open a door?
+
+Boys wear it daily, but
+girls wear it once a year
+what is it ?
+
+I go up
+but never come down.
+What am I?
+
+Output ONLY valid JSON.
 """
 
     response = model.generate_content(prompt)
