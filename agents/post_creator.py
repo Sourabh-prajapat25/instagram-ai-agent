@@ -59,7 +59,7 @@ def create_post():
 
     x = (1080 - text_width) // 2
 
-    y = (1920 - text_height) // 2 - 300
+    y = (1920 - text_height) // 2 - 450
 
     draw.multiline_text(
         (x, y),
