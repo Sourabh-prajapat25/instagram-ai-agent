@@ -10,7 +10,7 @@ def create_reel():
 
     output_path = "output/reels/final_reel.mp4"
 
-    duration = 17
+    duration = 20
     fps = 60
 
     ffmpeg = get_ffmpeg_exe()
