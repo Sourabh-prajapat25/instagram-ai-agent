@@ -41,7 +41,6 @@ Requirements:
 - fact field must contain the riddle text
 - Riddle must be short under (15 - 20 words)
 - Give Riddle that not has high vocabulary
-- Use emoji also in riddle at fact tab for good looking
 - you can Enter the sentence also for good looking it increace readbility 
 - Very easy English
 - Easy to understand
